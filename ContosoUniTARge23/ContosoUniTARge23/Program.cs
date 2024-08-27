@@ -1,3 +1,6 @@
+using ContosoUniTARge23.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace ContosoUniTARge23
 {
     public class Program
@@ -5,6 +8,9 @@ namespace ContosoUniTARge23
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<SchoolContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")))
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
