@@ -5,7 +5,7 @@ namespace ContosoUniTARge23.Data
 {
     public class DbInitializer
     {
-        public static void Initialize(SchoolContext context) 
+        public static void Initialize(SchoolContext context)
         {
             context.Database.EnsureCreated();
 
@@ -38,9 +38,9 @@ namespace ContosoUniTARge23.Data
             new Course{CourseID=1045,Title="Calculus",Credits=4},
             new Course{CourseID=3141,Title="Trigonometry",Credits=4},
             new Course{CourseID=2021,Title="Composition",Credits=3},
-            new Course{CourseID=2042,Title="Literature",Credits=4},
+            new Course{CourseID=2042,Title="Literature",Credits=4}
             };
-            foreach (Course c in  courses)
+            foreach (Course c in courses)
             {
                 context.Courses.Add(c);
             }
