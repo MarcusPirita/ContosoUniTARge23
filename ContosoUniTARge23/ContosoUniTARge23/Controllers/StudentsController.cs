@@ -69,6 +69,10 @@ namespace ContosoUniTARge23.Controllers
             return View(student);
         }
 
-
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
