@@ -8,11 +8,7 @@ namespace ContosoUniTARge23
     {
         public static void Main(string[] args)
         {
-            //var host = CreateHostBuilder(args).Build();
 
-            //CreateDbIfNotExists(host);
-
-            //host.Run();
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
